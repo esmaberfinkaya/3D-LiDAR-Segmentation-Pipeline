@@ -15,7 +15,7 @@ Teknik Özet: Ham 3B Nokta Bulutu (Point Cloud) verilerini voksel tabanlı (Voxe
 2. Yeni Başlayanlar İçin: Sorun Nedir?
 İnsanlar çevrelerine baktıklarında anında "Şurada bir ağaç var, yanında bir araba duruyor" diyebilirler. Beynimiz bunu otomatik yapar.
 Ancak bir bilgisayarın (veya otonom aracın) gözleri yoktur; sadece sayıları işleyebilir. LiDAR sensörü ona saniyede milyonlarca nokta gönderir. Bilgisayar için bu, havada asılı duran milyonlarca anlamsız kum tanesinden farksızdır.
-Bizim Görevimiz: Bu milyonlarca "kum tanesini" (noktayı) analiz edip, bilgisayara "Bak, şu birbirine benzeyen 5000 tanesi bir araya gelip bir Duvar oluşturuyor" demeyi öğretmektir.
+Bizim Görevimiz: Bu milyonlarca "kum tanesini" (noktayı) analiz edip, bilgisayara "Bak, şu birbirine benzeyen 5000 tanesi bir araya gelip bir Duvar oluşturuyor" demeyi öğretmektir.                                                                                                                                              
 3. Temel Kavramlar Sözlüğü (Analojilerle)
 Projeyi anlamak için gereken terimler, hem basit hem teknik açıklamalarıyla:
 Terim	Basit Analoji (Ne Gibi?)	Teknik Açıklama
@@ -44,7 +44,7 @@ Sadece konuma (X,Y,Z) bakmak nesneleri ayırmak için yetmez. Algoritmamız, her
 Ağırlıklandırma (Weighting): Duvardaki küçük pürüzlerin aşırı bölünmeye yol açmaması için normal vektörlerin etkisi matematiksel olarak dengelenir.
 Adım 3: Nesne İlişkilendirme ve Bölütleme (DBSCAN)
 Çıkarılan geometrik özellikler, DBSCAN (Density-Based Spatial Clustering) algoritmasına beslenir. Algoritma, hem konumu yakın olan hem de geometrik özellikleri (yönü, açısı) birbirine benzeyen noktaları aynı "Nesne" olarak etiketler.
-Aşağıda, algoritmanın başarıyla işlediği ve farklı nesneleri (duvar, çatı, zemin parçaları) farklı renklerle ayırdığı sonuç görülmektedir:
+
 5.   Görsel Kanıt: Öncesi ve Sonrası
 <img src="Ekran görüntüsü 2026-02-13 145813.png" width="800" alt="Yan Yana Karşılaştırma">
 (Görsel 2: İşlem sonrası bölütlenmiş veri. Her renk farklı bir fiziksel nesneyi temsil eder.)
