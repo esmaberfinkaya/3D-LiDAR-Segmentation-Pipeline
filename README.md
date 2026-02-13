@@ -36,7 +36,7 @@ Adım 1: Vokselizasyon (Ham Veriyi Sadeleştirme)
 Devasa boyutlardaki .laz formatındaki ham veri, işlenmesi daha kolay olan .pcd formatındaki Voksel ızgaralarına dönüştürülür. (Veri boyutu %90+ azalır).
 Aşağıda, sadeleştirilmiş ancak henüz hiçbir anlam ifade etmeyen, tek renkli ham voksel verisini görmektesiniz:
 
-
+<img src="Ekran görüntüsü 2026-02-13 150027.png" width="800" alt="Yan Yana Karşılaştırma">
 (Görsel 1: İşlem öncesi ham nokta bulutu. Bilgisayar için sadece bir koordinat yığını.)
 Adım 2: Geometrik Öznitelik Mühendisliği (Feature Engineering)
 Sadece konuma (X,Y,Z) bakmak nesneleri ayırmak için yetmez. Algoritmamız, her vokselin komşularına bakarak yerel geometrisini analiz eder.
@@ -46,12 +46,13 @@ Adım 3: Nesne İlişkilendirme ve Bölütleme (DBSCAN)
 Çıkarılan geometrik özellikler, DBSCAN (Density-Based Spatial Clustering) algoritmasına beslenir. Algoritma, hem konumu yakın olan hem de geometrik özellikleri (yönü, açısı) birbirine benzeyen noktaları aynı "Nesne" olarak etiketler.
 Aşağıda, algoritmanın başarıyla işlediği ve farklı nesneleri (duvar, çatı, zemin parçaları) farklı renklerle ayırdığı sonuç görülmektedir:
 5.   Görsel Kanıt: Öncesi ve Sonrası
-
+<img src="Ekran görüntüsü 2026-02-13 145813.png" width="800" alt="Yan Yana Karşılaştırma">
 (Görsel 2: İşlem sonrası bölütlenmiş veri. Her renk farklı bir fiziksel nesneyi temsil eder.)
 Projenin başarısını en iyi anlatan şey, ham veri ile işlenmiş verinin yan yana karşılaştırmasıdır. Sistemimiz bu karşılaştırmayı otomatik olarak sunar.
 Sol Taraf (Ham Veri): Bilgisayarın ilk gördüğü karmaşa.
 Sağ Taraf (İşlenmiş Veri): Algoritmanın anlamlandırdığı, nesneleri ayrıştırdığı düzenli dünya 
 
+<img src="Ekran görüntüsü 2026-02-13 145522.png" width="800" alt="Yan Yana Karşılaştırma">
 
 (Görsel 3: Pipeline çıktısı. Sol: Ham gri vokseller. Sağ: Renklendirilmiş nesne öbekleri. Algoritmanın duvarları (mavi/gri) ve diğer yapıları başarıyla ayırdığı görülüyor.)
 
